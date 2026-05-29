@@ -1,0 +1,98 @@
+site_name: Conway 2027 – Výrobní manuál
+site_description: Výrobní manuál pro modely Conway 2027
+site_author: Hartje Production
+
+theme:
+  name: material
+  language: cs
+  palette:
+    primary: blue
+    accent: light blue
+  custom_dir: overrides
+
+extra_css:
+  - styles/extra.css
+
+nav:
+  - Úvod:
+      - Přehled: uvod/index.md
+
+  - Obecné:
+      - Specifikace: obecne/specifikace.md
+      - Bezpečnost: obecne/bezpecnost.md
+      - Nástroje: obecne/nastroje.md
+
+  - Montáž:
+      - Přehled: montaz/index.md
+      - Příprava: montaz/priprava.md
+      - Krok 1: montaz/krok1.md
+      - Krok 2: montaz/krok2.md
+      - Kontrola: montaz/kontrola.md
+
+  - Modely:
+      - Cairon C 1.0:
+          - Přehled: modely/cairon-c-1-0/index.md
+          - Specifické kroky: modely/cairon-c-1-0/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-1-0/schema-kabelaze.md
+
+      - Cairon C 2.0:
+          - Přehled: modely/cairon-c-2-0/index.md
+          - Specifické kroky: modely/cairon-c-2-0/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-2-0/schema-kabelaze.md
+
+      - Cairon C 4.0:
+          - Přehled: modely/cairon-c-4-0/index.md
+          - Specifické kroky: modely/cairon-c-4-0/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-4-0/schema-kabelaze.md
+
+      - Cairon C 1.0 Nexus 8 chain:
+          - Přehled: modely/cairon-c-1-0-nexus-8-chain/index.md
+          - Specifické kroky: modely/cairon-c-1-0-nexus-8-chain/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-1-0-nexus-8-chain/schema-kabelaze.md
+
+      - Cairon C 2.0 B 800:
+          - Přehled: modely/cairon-c-2-0-b-800/index.md
+          - Specifické kroky: modely/cairon-c-2-0-b-800/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-2-0-b-800/schema-kabelaze.md
+
+      - Cairon C 2.0 B RBN 600:
+          - Přehled: modely/cairon-c-2-0-b-rbn-600/index.md
+          - Specifické kroky: modely/cairon-c-2-0-b-rbn-600/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-2-0-b-rbn-600/schema-kabelaze.md
+
+      - Cairon C 2.0 B RBN 800:
+          - Přehled: modely/cairon-c-2-0-b-rbn-800/index.md
+          - Specifické kroky: modely/cairon-c-2-0-b-rbn-800/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-2-0-b-rbn-800/schema-kabelaze.md
+
+      - Cairon C 4.0 B:
+          - Přehled: modely/cairon-c-4-0-b/index.md
+          - Specifické kroky: modely/cairon-c-4-0-b/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-4-0-b/schema-kabelaze.md
+
+      - Cairon C 4.0 B RBN:
+          - Přehled: modely/cairon-c-4-0-b-rbn/index.md
+          - Specifické kroky: modely/cairon-c-4-0-b-rbn/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-c-4-0-b-rbn/schema-kabelaze.md
+
+      - Cairon S 2.0:
+          - Přehled: modely/cairon-s-2-0/index.md
+          - Specifické kroky: modely/cairon-s-2-0/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-s-2-0/schema-kabelaze.md
+
+      - Cairon S 3.0:
+          - Přehled: modely/cairon-s-3-0/index.md
+          - Specifické kroky: modely/cairon-s-3-0/specificke-kroky.md
+          - Schéma kabeláže: modely/cairon-s-3-0/schema-kabelaze.md
+
+  - Přílohy:
+      - Schéma elektriky: prilohy/schema-elektriky.pdf
+      - Tabulka momentů: prilohy/tabulka-momentu.md
+theme:
+  name: material
+  language: cs
+  palette:
+    primary: "#0b4ea2"
+    accent: "#009fe3"
+  custom_dir: overrides
+

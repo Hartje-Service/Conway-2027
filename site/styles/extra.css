@@ -1,0 +1,31 @@
+.custom-header {
+  width: 100%;
+  background-color: #0b4ea2;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.custom-header img {
+  height: 45px;
+  object-fit: contain;
+}
+/* 🔹 Fixní vodoznak Conway */
+.md-content::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background-image: url("../images/vodoznak-conway.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.55;        /* ať je fakt vidět */
+    transform: translate(-50%, -50%);
+    z-index: 0;            /* místo -1 */
+    pointer-events: none;  /* ať neblokuje klikání */
+}
+
