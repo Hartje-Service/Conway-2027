@@ -16,11 +16,6 @@ extra_css:
 plugins:
   - search
   - include-markdown
-  - with-pdf:
-      enabled_if_env: ENABLE_PDF_EXPORT
-      output_path: pdf/
-      cover: true
-      toc_level: 2
 
 nav:
 

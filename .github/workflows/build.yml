@@ -11,23 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # -----------------------------
-      # 1️⃣ Checkout repository
-      # -----------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # -----------------------------
-      # 2️⃣ Set up Python
-      # -----------------------------
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # -----------------------------
-      # 3️⃣ Cache pip (zrychlení buildů)
-      # -----------------------------
       - name: Cache pip
         uses: actions/cache@v4
         with:
@@ -36,65 +27,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      # -----------------------------
-      # 4️⃣ Systémové knihovny pro WeasyPrint
-      # -----------------------------
-      - name: Install system dependencies for WeasyPrint
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libpango-1.0-0 \
-            libcairo2 \
-            libgdk-pixbuf2.0-0 \
-            libffi-dev \
-            libxml2 \
-            libxslt1.1 \
-            libjpeg-dev \
-            libpng-dev \
-            fonts-dejavu-core
-
-      # -----------------------------
-      # 5️⃣ Python knihovny (ověřené verze)
-      # -----------------------------
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install mkdocs==1.6.1
           pip install mkdocs-material==9.7.6
-          pip install mkdocs-with-pdf==0.9.3
           pip install mkdocs-include-markdown-plugin
-          pip install weasyprint==60.1
-          pip install "pydyf<0.10"
-          pip install cairocffi==1.7.1
 
-      # -----------------------------
-      # 6️⃣ Build MkDocs s PDF exportem
-      # -----------------------------
-      - name: Build MkDocs site with PDF export
-        env:
-          ENABLE_PDF_EXPORT: "1"
-        run: |
-          mkdocs build --clean
+      - name: Build MkDocs site
+        run: mkdocs build --clean
 
-      # -----------------------------
-      # 7️⃣ Verify PDF output (kontrola PDF)
-      # -----------------------------
-      - name: Verify PDF output
-        run: |
-          echo "Obsah složky site/pdf:"
-          ls -lh site/pdf || echo "PDF složka neexistuje!"
-
-      # -----------------------------
-      # 8️⃣ Upload artefaktů
-      # -----------------------------
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
-  # -----------------------------
-  # 9️⃣ Deploy na GitHub Pages
-  # -----------------------------
   deploy:
     needs: build
     permissions:
