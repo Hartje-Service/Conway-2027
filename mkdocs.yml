@@ -16,27 +16,25 @@ extra_css:
 plugins:
   - search
   - include-markdown
-
-  # PDF plugin – aktivuje se jen při buildu (ENABLE_PDF_EXPORT=1)
   - with-pdf:
       enabled_if_env: ENABLE_PDF_EXPORT
       output_path: pdf/
       cover: true
       toc_level: 2
-      # seznam PDF, která se mají vygenerovat
-      files:
-        Cairon-C1-Montaz.pdf: modely/cairon-c-1-0/Montáž.md
-        Cairon-C2-Montaz.pdf: modely/cairon-c-2-0/Montáž.md
-        Cairon-C4-Montaz.pdf: modely/cairon-c-4-0/Montáž.md
-        cairon-c-1-0-nexus-8-chain-Montaz.pdf: modely/cairon-c-1-0-nexus-8-chain/Montáž.md
-        cairon-c-2-0-b-800-Montaz.pdf: modely/cairon-c-2-0-b-800/Montáž.md
-        cairon-c-2-0-b-rbn-600-Montaz.pdf: modely/cairon-c-2-0-b-rbn-600/Montáž.md
-        cairon-c-2-0-b-rbn-800-Montaz.pdf: modely/cairon-c-2-0-b-rbn-800/Montáž.md
-        cairon-c-4-0-b-Montaz.pdf: modely/cairon-c-4-0-b/Montáž.md
-        cairon-c-4-0-b-rbn-Montaz.pdf: modely/cairon-c-4-0-b-rbn/Montáž.md
-        Cairon-S2-Montaz.pdf: modely/cairon-s-2-0/Montáž.md
-        Cairon-S3-Montaz.pdf: modely/cairon-s-3-0/Montáž.md
-
+      # seznam souborů pro PDF export
+      include_pages:
+        - modely/cairon-c-1-0/Montáž.md
+        - modely/cairon-c-2-0/Montáž.md
+        - modely/cairon-c-4-0/Montáž.md
+        - modely/cairon-c-1-0-nexus-8-chain/Montáž.md
+        - modely/cairon-c-2-0-b-800/Montáž.md
+        - modely/cairon-c-2-0-b-rbn-600/Montáž.md
+        - modely/cairon-c-2-0-b-rbn-800/Montáž.md
+        - modely/cairon-c-4-0-b/Montáž.md
+        - modely/cairon-c-4-0-b-rbn/Montáž.md
+        - modely/cairon-s-2-0/Montáž.md
+        - modely/cairon-s-3-0/Montáž.md
+        
 nav:
 
   - Obecné:
