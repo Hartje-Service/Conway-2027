@@ -1,9 +1,10 @@
-name: Build MkDocs + Generate PDFs
+name: Build and Deploy MkDocs
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,19 +19,52 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install MkDocs + plugins
+      - name: Install system dependencies for WeasyPrint
         run: |
-          pip install mkdocs-material
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 \
+            libcairo2 \
+            libgdk-pixbuf2.0-0 \
+            libffi-dev \
+            libxml2 \
+            libxslt1.1 \
+            libjpeg-dev \
+            libpng-dev
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs==1.6.1
+          pip install mkdocs-material==9.7.6
           pip install mkdocs-with-pdf
           pip install mkdocs-include-markdown-plugin
+          pip install weasyprint==60.1
+          pip install pydyf==0.9.0
 
-      - name: Build site with PDF export enabled
+      - name: Build MkDocs site with PDF export
         env:
           ENABLE_PDF_EXPORT: "1"
-        run: mkdocs build --clean
+        run: |
+          mkdocs build --clean
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          path: site
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

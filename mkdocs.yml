@@ -6,8 +6,8 @@ theme:
   name: material
   language: cs
   palette:
-    primary: blue
-    accent: light blue
+    primary: "#0b4ea2"
+    accent: "#009fe3"
   custom_dir: overrides
 
 extra_css:
@@ -17,45 +17,25 @@ plugins:
   - search
   - include-markdown
 
+  # PDF plugin – aktivuje se jen při buildu (ENABLE_PDF_EXPORT=1)
   - with-pdf:
-      output_path: pdf/Cairon-C1-Montaz.pdf
-      cover_title: "Cairon C 1.0 – Montážní manuál"
-      cover_subtitle: "Výrobní dokumentace"
-      author: "Hartje Production"
-      include:
-        - modely/cairon-c-1-0/Montáž.md
-
-  - with-pdf:
-      output_path: pdf/Cairon-C2-Montaz.pdf
-      cover_title: "Cairon C 2.0 – Montážní manuál"
-      cover_subtitle: "Výrobní dokumentace"
-      author: "Hartje Production"
-      include:
-        - modely/cairon-c-2-0/Montáž.md
-
-  - with-pdf:
-      output_path: pdf/Cairon-C4-Montaz.pdf
-      cover_title: "Cairon C 4.0 – Montážní manuál"
-      cover_subtitle: "Výrobní dokumentace"
-      author: "Hartje Production"
-      include:
-        - modely/cairon-c-4-0/Montáž.md
-
-  - with-pdf:
-      output_path: pdf/Cairon-S2-Montaz.pdf
-      cover_title: "Cairon S 2.0 – Montážní manuál"
-      cover_subtitle: "Výrobní dokumentace"
-      author: "Hartje Production"
-      include:
-        - modely/cairon-s-2-0/Montáž.md
-
-  - with-pdf:
-      output_path: pdf/Cairon-S3-Montaz.pdf
-      cover_title: "Cairon S 3.0 – Montážní manuál"
-      cover_subtitle: "Výrobní dokumentace"
-      author: "Hartje Production"
-      include:
-        - modely/cairon-s-3-0/Montáž.md
+      enabled_if_env: ENABLE_PDF_EXPORT
+      output_path: pdf/
+      cover: true
+      toc_level: 2
+      # seznam PDF, která se mají vygenerovat
+      files:
+        Cairon-C1-Montaz.pdf: modely/cairon-c-1-0/Montáž.md
+        Cairon-C2-Montaz.pdf: modely/cairon-c-2-0/Montáž.md
+        Cairon-C4-Montaz.pdf: modely/cairon-c-4-0/Montáž.md
+        cairon-c-1-0-nexus-8-chain-Montaz.pdf: modely/cairon-c-1-0-nexus-8-chain/Montáž.md
+        cairon-c-2-0-b-800-Montaz.pdf: modely/cairon-c-2-0-b-800/Montáž.md
+        cairon-c-2-0-b-rbn-600-Montaz.pdf: modely/cairon-c-2-0-b-rbn-600/Montáž.md
+        cairon-c-2-0-b-rbn-800-Montaz.pdf: modely/cairon-c-2-0-b-rbn-800/Montáž.md
+        cairon-c-4-0-b-Montaz.pdf: modely/cairon-c-4-0-b/Montáž.md
+        cairon-c-4-0-b-rbn-Montaz.pdf: modely/cairon-c-4-0-b-rbn/Montáž.md
+        Cairon-S2-Montaz.pdf: modely/cairon-s-2-0/Montáž.md
+        Cairon-S3-Montaz.pdf: modely/cairon-s-3-0/Montáž.md
 
 nav:
 
@@ -122,11 +102,3 @@ nav:
 
   - Přílohy:
       - Utahovací Momenty: prilohy/tabulka-momentu.md
-theme:
-  name: material
-  language: cs
-  palette:
-    primary: "#0b4ea2"
-    accent: "#009fe3"
-  custom_dir: overrides
-
