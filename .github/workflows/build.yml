@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,7 +20,6 @@ jobs:
 
       - name: Install system dependencies for WeasyPrint
         run: |
-          sudo apt-get install -y fonts-dejavu-core
           sudo apt-get update
           sudo apt-get install -y \
             libpango-1.0-0 \
@@ -31,7 +29,8 @@ jobs:
             libxml2 \
             libxslt1.1 \
             libjpeg-dev \
-            libpng-dev
+            libpng-dev \
+            fonts-dejavu-core
 
       - name: Install Python dependencies
         run: |
@@ -46,8 +45,7 @@ jobs:
       - name: Build MkDocs site with PDF export
         env:
           ENABLE_PDF_EXPORT: "1"
-        run: |
-          mkdocs build --clean
+        run: mkdocs build --clean
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
@@ -62,12 +60,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-        

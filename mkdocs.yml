@@ -21,20 +21,7 @@ plugins:
       output_path: pdf/
       cover: true
       toc_level: 2
-      # seznam souborů pro PDF export
-      include_pages:
-        - modely/cairon-c-1-0/Montáž.md
-        - modely/cairon-c-2-0/Montáž.md
-        - modely/cairon-c-4-0/Montáž.md
-        - modely/cairon-c-1-0-nexus-8-chain/Montáž.md
-        - modely/cairon-c-2-0-b-800/Montáž.md
-        - modely/cairon-c-2-0-b-rbn-600/Montáž.md
-        - modely/cairon-c-2-0-b-rbn-800/Montáž.md
-        - modely/cairon-c-4-0-b/Montáž.md
-        - modely/cairon-c-4-0-b-rbn/Montáž.md
-        - modely/cairon-s-2-0/Montáž.md
-        - modely/cairon-s-3-0/Montáž.md
-        
+
 nav:
 
   - Obecné:
