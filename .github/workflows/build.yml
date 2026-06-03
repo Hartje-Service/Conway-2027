@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,6 +19,20 @@ jobs:
         with:
           python-version: "3.11"
 
+      # -----------------------------
+      # CACHE PIP (zrychlí build ×3)
+      # -----------------------------
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # -----------------------------------------
+      # SYSTÉMOVÉ KNIHOVNY PRO WEASYPRINT
+      # -----------------------------------------
       - name: Install system dependencies for WeasyPrint
         run: |
           sudo apt-get update
@@ -32,26 +47,48 @@ jobs:
             libpng-dev \
             fonts-dejavu-core
 
+      # -----------------------------------------
+      # PYTHON KNIHOVNY (OVĚŘENÉ VERZE)
+      # -----------------------------------------
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
           pip install mkdocs==1.6.1
           pip install mkdocs-material==9.7.6
-          pip install mkdocs-with-pdf
+          pip install mkdocs-with-pdf==0.9.3
           pip install mkdocs-include-markdown-plugin
           pip install weasyprint==60.1
-          pip install pydyf==0.9.0
+          pip install "pydyf<0.10"
+          pip install cairocffi==1.7.1
 
+      # -----------------------------------------
+      # BUILD S PDF EXPORTEM
+      # -----------------------------------------
       - name: Build MkDocs site with PDF export
         env:
           ENABLE_PDF_EXPORT: "1"
-        run: mkdocs build --clean
+        run: |
+          mkdocs build --clean
 
+      # -----------------------------------------
+      # VERIFY PDF (kontrola, že PDF opravdu vzniklo)
+      # -----------------------------------------
+      - name: Verify PDF output
+        run: |
+          echo "Obsah složky site/pdf:"
+          ls -lh site/pdf || echo "PDF složka neexistuje!"
+
+      # -----------------------------------------
+      # UPLOAD ARTEFAKTŮ
+      # -----------------------------------------
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
+  # -----------------------------------------
+  # DEPLOY NA GITHUB PAGES
+  # -----------------------------------------
   deploy:
     needs: build
     permissions:
@@ -60,7 +97,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
