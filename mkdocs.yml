@@ -13,81 +13,115 @@ theme:
 extra_css:
   - styles/extra.css
 
+plugins:
+  - search
+  - include-markdown
+
+  - with-pdf:
+      output_path: pdf/Cairon-C1-Montaz.pdf
+      cover_title: "Cairon C 1.0 – Montážní manuál"
+      cover_subtitle: "Výrobní dokumentace"
+      author: "Hartje Production"
+      include:
+        - modely/cairon-c-1-0/Montáž.md
+
+  - with-pdf:
+      output_path: pdf/Cairon-C2-Montaz.pdf
+      cover_title: "Cairon C 2.0 – Montážní manuál"
+      cover_subtitle: "Výrobní dokumentace"
+      author: "Hartje Production"
+      include:
+        - modely/cairon-c-2-0/Montáž.md
+
+  - with-pdf:
+      output_path: pdf/Cairon-C4-Montaz.pdf
+      cover_title: "Cairon C 4.0 – Montážní manuál"
+      cover_subtitle: "Výrobní dokumentace"
+      author: "Hartje Production"
+      include:
+        - modely/cairon-c-4-0/Montáž.md
+
+  - with-pdf:
+      output_path: pdf/Cairon-S2-Montaz.pdf
+      cover_title: "Cairon S 2.0 – Montážní manuál"
+      cover_subtitle: "Výrobní dokumentace"
+      author: "Hartje Production"
+      include:
+        - modely/cairon-s-2-0/Montáž.md
+
+  - with-pdf:
+      output_path: pdf/Cairon-S3-Montaz.pdf
+      cover_title: "Cairon S 3.0 – Montážní manuál"
+      cover_subtitle: "Výrobní dokumentace"
+      author: "Hartje Production"
+      include:
+        - modely/cairon-s-3-0/Montáž.md
+
 nav:
-  - Úvod:
-      - Přehled: uvod/index.md
 
   - Obecné:
       - Specifikace: obecne/specifikace.md
       - Bezpečnost: obecne/bezpecnost.md
       - Nástroje: obecne/nastroje.md
 
-  - Montáž:
-      - Přehled: montaz/index.md
-      - Příprava: montaz/priprava.md
-      - Krok 1: montaz/krok1.md
-      - Krok 2: montaz/krok2.md
-      - Kontrola: montaz/kontrola.md
-
   - Modely:
       - Cairon C 1.0:
           - Přehled: modely/cairon-c-1-0/index.md
-          - Specifické kroky: modely/cairon-c-1-0/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-1-0/schema-kabelaze.md
+          - Montáž: modely/cairon-c-1-0/Montáž.md
+          - Kusovníky: modely/cairon-c-1-0/Kusovníky.md
 
       - Cairon C 2.0:
           - Přehled: modely/cairon-c-2-0/index.md
-          - Specifické kroky: modely/cairon-c-2-0/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-2-0/schema-kabelaze.md
+          - Montáž: modely/cairon-c-2-0/Montáž.md
+          - Kusovníky: modely/cairon-c-2-0/Kusovníky.md
 
       - Cairon C 4.0:
           - Přehled: modely/cairon-c-4-0/index.md
-          - Specifické kroky: modely/cairon-c-4-0/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-4-0/schema-kabelaze.md
+          - Montáž: modely/cairon-c-4-0/Montáž.md
+          - Kusovníky: modely/cairon-c-4-0/Kusovníky.md
 
       - Cairon C 1.0 Nexus 8 chain:
           - Přehled: modely/cairon-c-1-0-nexus-8-chain/index.md
-          - Specifické kroky: modely/cairon-c-1-0-nexus-8-chain/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-1-0-nexus-8-chain/schema-kabelaze.md
+          - Montáž: modely/cairon-c-1-0-nexus-8-chain/Montáž.md
+          - Kusovníky: modely/cairon-c-1-0-nexus-8-chain/Kusovníky.md
 
       - Cairon C 2.0 B 800:
           - Přehled: modely/cairon-c-2-0-b-800/index.md
-          - Specifické kroky: modely/cairon-c-2-0-b-800/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-2-0-b-800/schema-kabelaze.md
+          - Montáž: modely/cairon-c-2-0-b-800/Montáž.md
+          - Kusovníky: modely/cairon-c-2-0-b-800/Kusovníky.md
 
       - Cairon C 2.0 B RBN 600:
           - Přehled: modely/cairon-c-2-0-b-rbn-600/index.md
-          - Specifické kroky: modely/cairon-c-2-0-b-rbn-600/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-2-0-b-rbn-600/schema-kabelaze.md
+          - Montáž: modely/cairon-c-2-0-b-rbn-600/Montáž.md
+          - Kusovníky: modely/cairon-c-2-0-b-rbn-600/Kusovníky.md
 
       - Cairon C 2.0 B RBN 800:
           - Přehled: modely/cairon-c-2-0-b-rbn-800/index.md
-          - Specifické kroky: modely/cairon-c-2-0-b-rbn-800/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-2-0-b-rbn-800/schema-kabelaze.md
+          - Montáž: modely/cairon-c-2-0-b-rbn-800/Montáž.md
+          - Kusovníky: modely/cairon-c-2-0-b-rbn-800/Kusovníky.md
 
       - Cairon C 4.0 B:
           - Přehled: modely/cairon-c-4-0-b/index.md
-          - Specifické kroky: modely/cairon-c-4-0-b/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-4-0-b/schema-kabelaze.md
+          - Montáž: modely/cairon-c-4-0-b/Montáž.md
+          - Kusovníky: modely/cairon-c-4-0-b/Kusovníky.md
 
       - Cairon C 4.0 B RBN:
           - Přehled: modely/cairon-c-4-0-b-rbn/index.md
-          - Specifické kroky: modely/cairon-c-4-0-b-rbn/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-c-4-0-b-rbn/schema-kabelaze.md
+          - Montáž: modely/cairon-c-4-0-b-rbn/Montáž.md
+          - Kusovníky: modely/cairon-c-4-0-b-rbn/Kusovníky.md
 
       - Cairon S 2.0:
           - Přehled: modely/cairon-s-2-0/index.md
-          - Specifické kroky: modely/cairon-s-2-0/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-s-2-0/schema-kabelaze.md
+          - Montáž: modely/cairon-s-2-0/Montáž.md
+          - Kusovníky: modely/cairon-s-2-0/Kusovníky.md
 
       - Cairon S 3.0:
           - Přehled: modely/cairon-s-3-0/index.md
-          - Specifické kroky: modely/cairon-s-3-0/specificke-kroky.md
-          - Schéma kabeláže: modely/cairon-s-3-0/schema-kabelaze.md
+          - Montáž: modely/cairon-s-3-0/Montáž.md
+          - Kusovníky: modely/cairon-s-3-0/Kusovníky.md
 
   - Přílohy:
-      - Schéma elektriky: prilohy/schema-elektriky.pdf
-      - Tabulka momentů: prilohy/tabulka-momentu.md
+      - Utahovací Momenty: prilohy/tabulka-momentu.md
 theme:
   name: material
   language: cs

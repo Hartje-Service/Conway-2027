@@ -2,7 +2,7 @@
 
 <!-- HLAVNÍ OBRÁZEK MODELU -->
 <p align="center">
-  <img src="images/C 1.0.png" width="70%">
+  <img src="C 1.0.png" width="70%">
 </p>
 
 <br>
@@ -14,13 +14,34 @@ Podvozek tvoří odpružená vidlice se zdvihem 120 mm, 29" kola a široké plá
 
 </div>
 
+---
+
+## <u><strong>Další obrázky</strong></u>
+
+<!-- DVA OBRÁZKY VEDLE SEBE -->
+<div style="display: flex; gap: 20px; justify-content: center;">
+  <img src="images/model-detail1.png" width="45%">
+  <img src="images/model-detail2.png" width="45%">
+</div>
+
+<br>
+
+<!-- TŘETÍ OBRÁZEK PŘES CELOU ŠÍŘKU -->
+<p align="center">
+  <img src="images/model-detail3.png" width="70%">
+</p>
+
+---
+
 ## <u><strong>Rychlé informace</strong></u>
 
 - Typ rámu: Hliníkový rám (Aluminium / Alloy) 
 - Velikosti: S,M,L,XL -> 27,5", 29"
-- Barvy: Black matt anthracite; Offwhite matt black 
+- Barvy:  
 - Hlavní komponenty: **Vidlice**: SUNTOUR SF27-XCM32-DS-Boost; **Motor**: BOSCH Drive Unit Performance / 50Nm; **Baterie**:PowerTube 600; **Brzdy**:Tektro hydraulické kotoučové; **Řazení**:1x9 (CUES)
 - Zaměření modelu: E‑SUV / univerzální e‑bike 
+
+---
 
 ## <u><strong>Odkazy na další části</strong></u>
 
