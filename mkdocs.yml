@@ -16,7 +16,18 @@ extra_css:
 plugins:
   - search
   - include-markdown
+      preserve_includer_indent: false
+  - macros
 
+extra:
+  base_url: "https://hartje-service.github.io/QiO-2027"
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  
 nav:
 
   - Obecné:
