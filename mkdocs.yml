@@ -15,19 +15,18 @@ extra_css:
 
 plugins:
   - search
-  - include-markdown
+  - include-markdown:
       preserve_includer_indent: false
   - macros
 
 extra:
-  base_url: "https://hartje-service.github.io/QiO-2027"
+  base_url: "https://hartje-service.github.io/V-robn-manu-l"
 
 markdown_extensions:
-  - attr_list
   - md_in_html
   - tables
   - admonition
-  
+
 nav:
 
   - Obecné:
@@ -37,57 +36,27 @@ nav:
 
   - Modely:
       - Cairon C 1.0:
-          - Přehled: modely/cairon-c-1-0/index.md
+          - Přehled: modely/cairon-c-1-0/Přehled.md
           - Montáž: modely/cairon-c-1-0/Montáž.md
           - Kusovníky: modely/cairon-c-1-0/Kusovníky.md
 
       - Cairon C 2.0:
-          - Přehled: modely/cairon-c-2-0/index.md
+          - Přehled: modely/cairon-c-2-0/Přehled.md
           - Montáž: modely/cairon-c-2-0/Montáž.md
           - Kusovníky: modely/cairon-c-2-0/Kusovníky.md
 
       - Cairon C 4.0:
-          - Přehled: modely/cairon-c-4-0/index.md
+          - Přehled: modely/cairon-c-4-0/Přehled.md
           - Montáž: modely/cairon-c-4-0/Montáž.md
           - Kusovníky: modely/cairon-c-4-0/Kusovníky.md
 
-      - Cairon C 1.0 Nexus 8 chain:
-          - Přehled: modely/cairon-c-1-0-nexus-8-chain/index.md
-          - Montáž: modely/cairon-c-1-0-nexus-8-chain/Montáž.md
-          - Kusovníky: modely/cairon-c-1-0-nexus-8-chain/Kusovníky.md
-
-      - Cairon C 2.0 B 800:
-          - Přehled: modely/cairon-c-2-0-b-800/index.md
-          - Montáž: modely/cairon-c-2-0-b-800/Montáž.md
-          - Kusovníky: modely/cairon-c-2-0-b-800/Kusovníky.md
-
-      - Cairon C 2.0 B RBN 600:
-          - Přehled: modely/cairon-c-2-0-b-rbn-600/index.md
-          - Montáž: modely/cairon-c-2-0-b-rbn-600/Montáž.md
-          - Kusovníky: modely/cairon-c-2-0-b-rbn-600/Kusovníky.md
-
-      - Cairon C 2.0 B RBN 800:
-          - Přehled: modely/cairon-c-2-0-b-rbn-800/index.md
-          - Montáž: modely/cairon-c-2-0-b-rbn-800/Montáž.md
-          - Kusovníky: modely/cairon-c-2-0-b-rbn-800/Kusovníky.md
-
-      - Cairon C 4.0 B:
-          - Přehled: modely/cairon-c-4-0-b/index.md
-          - Montáž: modely/cairon-c-4-0-b/Montáž.md
-          - Kusovníky: modely/cairon-c-4-0-b/Kusovníky.md
-
-      - Cairon C 4.0 B RBN:
-          - Přehled: modely/cairon-c-4-0-b-rbn/index.md
-          - Montáž: modely/cairon-c-4-0-b-rbn/Montáž.md
-          - Kusovníky: modely/cairon-c-4-0-b-rbn/Kusovníky.md
-
       - Cairon S 2.0:
-          - Přehled: modely/cairon-s-2-0/index.md
+          - Přehled: modely/cairon-s-2-0/Přehled.md
           - Montáž: modely/cairon-s-2-0/Montáž.md
           - Kusovníky: modely/cairon-s-2-0/Kusovníky.md
 
       - Cairon S 3.0:
-          - Přehled: modely/cairon-s-3-0/index.md
+          - Přehled: modely/cairon-s-3-0/Přehled.md
           - Montáž: modely/cairon-s-3-0/Montáž.md
           - Kusovníky: modely/cairon-s-3-0/Kusovníky.md
 
