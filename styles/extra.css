@@ -23,9 +23,30 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 0.55;        /* ať je fakt vidět */
+    opacity: 0.35;        /* ať je fakt vidět */
     transform: translate(-50%, -50%);
     z-index: 0;            /* místo -1 */
     pointer-events: none;  /* ať neblokuje klikání */
 }
 
+/* Globální vystředění všech obrázků + mezera pod nimi */
+.md-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;   /* příjemná mezera mezi obrázky */
+}
+
+/* Flex řádek pro více obrázků vedle sebe */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;             /* mezera mezi obrázky vedle sebe */
+    margin: 20px 0;        /* mezera nad a pod řádkem */
+}
+
+/* Obrázky uvnitř .row se nechovají jako blokové */
+.row img {
+    display: inline-block;
+    margin: 0;             /* odstranění spodní mezery */
+}
