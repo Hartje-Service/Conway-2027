@@ -1,13 +1,14 @@
-site_name: Conway 2027 – Výrobní manuál
-site_description: Výrobní manuál pro modely Conway 2027
+﻿site_name: Značka a rok výroby
+site_description: Výrobní manuál pro modely
 site_author: Hartje Production
+docs_dir: docs
 
 theme:
   name: material
   language: cs
   palette:
-    primary: "#0b4ea2"
-    accent: "#009fe3"
+    primary: '#0b4ea2'
+    accent: '#009fe3'
   custom_dir: overrides
 
 extra_css:
@@ -20,7 +21,7 @@ plugins:
   - macros
 
 extra:
-  base_url: "https://hartje-service.github.io/V-robn-manu-l"
+  base_url: ''
 
 markdown_extensions:
   - md_in_html
@@ -28,37 +29,14 @@ markdown_extensions:
   - admonition
 
 nav:
-
   - Obecné:
       - Specifikace: obecne/specifikace.md
       - Bezpečnost: obecne/bezpecnost.md
       - Nástroje: obecne/nastroje.md
-
   - Modely:
-      - Cairon C 1.0:
-          - Přehled: modely/cairon-c-1-0/Přehled.md
-          - Montáž: modely/cairon-c-1-0/Montáž.md
-          - Kusovníky: modely/cairon-c-1-0/Kusovníky.md
-
-      - Cairon C 2.0:
-          - Přehled: modely/cairon-c-2-0/Přehled.md
-          - Montáž: modely/cairon-c-2-0/Montáž.md
-          - Kusovníky: modely/cairon-c-2-0/Kusovníky.md
-
-      - Cairon C 4.0:
-          - Přehled: modely/cairon-c-4-0/Přehled.md
-          - Montáž: modely/cairon-c-4-0/Montáž.md
-          - Kusovníky: modely/cairon-c-4-0/Kusovníky.md
-
-      - Cairon S 2.0:
-          - Přehled: modely/cairon-s-2-0/Přehled.md
-          - Montáž: modely/cairon-s-2-0/Montáž.md
-          - Kusovníky: modely/cairon-s-2-0/Kusovníky.md
-
-      - Cairon S 3.0:
-          - Přehled: modely/cairon-s-3-0/Přehled.md
-          - Montáž: modely/cairon-s-3-0/Montáž.md
-          - Kusovníky: modely/cairon-s-3-0/Kusovníky.md
-
+      - Šablona:
+          - Přehled: modely/Sablona/Přehled.md
+          - Montáž: modely/Sablona/Montáž.md
+          - Kusovníky: modely/Sablona/Kusovníky.md
   - Přílohy:
-      - Utahovací Momenty: prilohy/tabulka-momentu.md
+      - Tabulka momentů: prilohy/tabulka-momentu.md

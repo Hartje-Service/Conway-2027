@@ -1,40 +1,31 @@
 # Montáž – Cairon C 1.0
 
-## Vidlice
-!!! include "../../modules/vidlice.md"
+## Příprava rámu
+  {% include "../../modules/Rám/Rám.md" %}
 
-## Řídítka
-!!! include "../../modules/riditka.md"
+## Hlavové složení
+  {% include "../../modules/Hlavové-složení/24000-000650.md" %}
+
+## Vidlice
+  {% include "../../modules/Vidlice/20000-000650.md" %}
+
+## Řídítka s Nexusem
+  {% include "../../modules/Řidítka/Řidítka-c1-nexus.md" %}
+
+## Řídítka s CUES
+  {% include "../../modules/Řidítka/Řidítka-c1-cues.md" %}
 
 ## Kabeláž
-!!! include "../../modules/kabelaz.md"
+  {% include "../../modules/Kabeláž/Kabel-c1.md" %}
 
-## Motor
-!!! include "../../modules/motor.md"
+## Přední kolo
+  {% include "../../modules/Přední-kolo/C.md" %}
+
+## Uchycení baterie
+  {% include "../../modules/Uchycení-baterie/wave.md" %}  
 
 ## Baterie
-!!! include "../../modules/baterie.md"
+  {% include "../../modules/Baterie/baterie.md" %} 
 
-## Přední blatník
-!!! include "../../modules/predni-blatnik.md"
-
-## Zadní blatník
-!!! include "../../modules/zadni-blatnik.md"
-
-## Nosič
-!!! include "../../modules/nosic.md"
-
-## Přední světlo
-!!! include "../../modules/predni-svetlo.md"
-
-## Zadní světlo
-!!! include "../../modules/zadni-svetlo.md"
-
-## Převodník
-!!! include "../../modules/prevodnik.md"
-
-## Kryt řetězu
-!!! include "../../modules/kryt-retezu.md"
-
-## Kryt klínového řemene
-!!! include "../../modules/kryt-remene.md"
+## Motor
+  {% include "../../modules/Motor/Motor.md" %}
