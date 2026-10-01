@@ -10,3 +10,7 @@
     35000-EB1120015J → Šroub dlouhý<br> 
   </div>
 </div>
+
+<img src="{{ base_url }}/modules/Motor/images/Motor-kabely-popis.png" width="70%">
+
+<img src="{{ base_url }}/modules/Motor/images/motor-kabely.png" width="70%">
