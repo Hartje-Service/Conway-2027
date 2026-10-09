@@ -1,1 +1,0 @@
-<img src="../../modules/Zadní-blatník/images/z.blatník.png" width="70%">
