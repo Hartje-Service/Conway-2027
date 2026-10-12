@@ -1,0 +1,1 @@
+[Zobrazit obrázek tabulky v Excelu](Spojovací materiál.bmp)
