@@ -1,1 +1,0 @@
-<img src="../../modules/Nosič/images/nosič.png" width="70%">
